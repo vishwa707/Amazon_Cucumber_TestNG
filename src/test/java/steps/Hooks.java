@@ -12,7 +12,7 @@ public class Hooks {
     SearchResultPage results;
     ProductPage product;
 
-    @Before(order = 0)
+    @Before
     public void launchBrowser() {
         BaseClass.OpenBrowser("https://www.amazon.in/");
     }

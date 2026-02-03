@@ -3,7 +3,6 @@ package steps;
 import org.testng.Assert;
 
 import basePkg.BaseClass;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,8 +15,7 @@ public class AmazonSteps {
     SearchResultPage results;
     ProductPage product;
     
-    @Before(order = 1)
-    public void initPages() {
+    public AmazonSteps() {
         home = new Homepage(BaseClass.driver);
         results = new SearchResultPage(BaseClass.driver);
         product = new ProductPage(BaseClass.driver);
